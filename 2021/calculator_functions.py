@@ -31,3 +31,14 @@ def calculate_bingo_score(board, mask):
                 score += board[i][j]
 
     return score
+
+
+def calculate_lines_overlap(diagram):
+    count = 0
+
+    for row in diagram:
+        for col in row:
+            if (col > 1):
+                count += 1
+
+    return count

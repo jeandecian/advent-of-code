@@ -3,6 +3,7 @@ import data_functions as data_f
 import day1
 import day2
 import day3
+import day4
 
 
 class Test2021(unittest.TestCase):
@@ -22,6 +23,11 @@ class Test2021(unittest.TestCase):
             map(lambda x: list(map(int, list(x.rstrip()))), diagnostics))
         self.assertEqual(day3.part1(report), 2261546)
         self.assertEqual(day3.part2(report), 6775520)
+
+    def test_day4(self):
+        draw, boards = data_f.read_as_line_matrices(4)
+        self.assertEqual(day4.part1(draw, boards), 74320)
+        self.assertEqual(day4.part2(draw, boards), 17884)
 
 
 if __name__ == '__main__':

@@ -20,3 +20,14 @@ def calculate_rating(mode, report):
         i += 1
 
     return conv_f.convert_int_list_to_str(report[0])
+
+
+def calculate_bingo_score(board, mask):
+    score = 0
+
+    for i in range(5):
+        for j in range(5):
+            if (mask[i][j] == 0):
+                score += board[i][j]
+
+    return score

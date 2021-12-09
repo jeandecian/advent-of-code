@@ -1,5 +1,4 @@
-import data_functions as data_f
-import display_functions as disp_f
+import utils
 
 
 def part1(movements):
@@ -36,6 +35,6 @@ def part2(movements):
 
 
 if __name__ == '__main__':
-    movements = data_f.read_as_list(2)
-    disp_f.display_part(1, part1(movements))
-    disp_f.display_part(2, part2(movements))
+    movements = utils.read_as_list(2)
+    utils.display_part(1, part1(movements))
+    utils.display_part(2, part2(movements))

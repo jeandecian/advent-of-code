@@ -1,5 +1,4 @@
-import data_functions as data_f
-import display_functions as disp_f
+import utils
 
 
 def count_increment(measures, window_size=1):
@@ -16,6 +15,6 @@ def count_increment(measures, window_size=1):
 
 
 if __name__ == '__main__':
-    measures = data_f.read_as_int(1)
-    disp_f.display_part(1, count_increment(measures))
-    disp_f.display_part(2, count_increment(measures, 3))
+    measures = utils.read_as_int(1)
+    utils.display_part(1, count_increment(measures))
+    utils.display_part(2, count_increment(measures, 3))

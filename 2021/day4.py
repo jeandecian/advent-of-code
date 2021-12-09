@@ -1,7 +1,4 @@
-import calculator_functions as calc_f
-import create_functions as crea_f
-import data_functions as data_f
-import display_functions as disp_f
+import utils
 
 
 def check_board_masks(board):
@@ -16,7 +13,7 @@ def check_board_masks(board):
 
 
 def part1(draw, boards):
-    boards_masks = crea_f.create_empty_matrices(len(boards), 5, 5)
+    boards_masks = utils.create_empty_matrices(len(boards), 5, 5)
     bingo = False
     number_drawn = 0
     winning_board = 0
@@ -38,14 +35,14 @@ def part1(draw, boards):
                 winning_board = i
                 break
 
-    score = calc_f.calculate_bingo_score(
+    score = utils.calculate_bingo_score(
         boards[winning_board], boards_masks[winning_board])
 
     return score * number_drawn
 
 
 def part2(draw, boards):
-    boards_masks = crea_f.create_empty_matrices(len(boards), 5, 5)
+    boards_masks = utils.create_empty_matrices(len(boards), 5, 5)
     bingo = False
     number_drawn = 0
     last_winning_board = 0
@@ -71,13 +68,13 @@ def part2(draw, boards):
                     bingo = True
                     break
 
-    score = calc_f.calculate_bingo_score(
+    score = utils.calculate_bingo_score(
         boards[last_winning_board], boards_masks[last_winning_board])
 
     return score * number_drawn
 
 
 if __name__ == '__main__':
-    draw, boards = data_f.read_as_line_matrices(4)
-    disp_f.display_part(1, part1(draw, boards))
-    disp_f.display_part(2, part2(draw, boards))
+    draw, boards = utils.read_as_line_matrices(4)
+    utils.display_part(1, part1(draw, boards))
+    utils.display_part(2, part2(draw, boards))

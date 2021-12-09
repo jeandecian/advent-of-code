@@ -15,6 +15,7 @@ def count_increment(measures, window_size=1):
     return counter
 
 
-measures = data_f.read_as_int(1)
-disp_f.display_part(1, count_increment(measures))
-disp_f.display_part(2, count_increment(measures, 3))
+if __name__ == '__main__':
+    measures = data_f.read_as_int(1)
+    disp_f.display_part(1, count_increment(measures))
+    disp_f.display_part(2, count_increment(measures, 3))

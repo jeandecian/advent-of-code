@@ -2,6 +2,7 @@ import unittest
 import data_functions as data_f
 import day1
 import day2
+import day3
 
 
 class Test2021(unittest.TestCase):
@@ -14,6 +15,13 @@ class Test2021(unittest.TestCase):
         movements = data_f.read_as_list(2)
         self.assertEqual(day2.part1(movements), 1936494)
         self.assertEqual(day2.part2(movements), 1997106066)
+
+    def test_day3(self):
+        diagnostics = data_f.read_as_str(3)
+        report = list(
+            map(lambda x: list(map(int, list(x.rstrip()))), diagnostics))
+        self.assertEqual(day3.part1(report), 2261546)
+        self.assertEqual(day3.part2(report), 6775520)
 
 
 if __name__ == '__main__':

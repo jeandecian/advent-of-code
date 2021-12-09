@@ -12,3 +12,7 @@ def read_data(day, mode):
 
 def read_as_int(day, mode='input'):
     return list(map(int, read_data(day, mode)))
+
+
+def read_as_list(day, mode='input'):
+    return list(map(lambda x: x.split(), read_data(day, mode)))

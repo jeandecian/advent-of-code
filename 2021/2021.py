@@ -6,6 +6,7 @@ import day3
 import day4
 import day5
 import day6
+import day7
 
 
 class Test2021(unittest.TestCase):
@@ -44,6 +45,11 @@ class Test2021(unittest.TestCase):
             lanterfishses_ages, 80), 359999)
         self.assertEqual(day6.calculate_lanterfishes_propagation(
             lanterfishses_ages, 256), 1631647919273)
+
+    def test_day7(self):
+        crabs_positions = utils.read_as_int_list(7)
+        self.assertEqual(day7.calculate_min_fuel(crabs_positions, 1), 356179)
+        self.assertEqual(day7.calculate_min_fuel(crabs_positions, 2), 99788435)
 
 
 if __name__ == '__main__':

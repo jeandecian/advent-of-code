@@ -44,6 +44,19 @@ def calculate_lines_overlap(diagram):
     return count
 
 
+def calculate_fuel(counter, gathering, part):
+    cost = 0
+
+    for i in range(len(counter)):
+        distance = abs(i-gathering)
+        if (part == 1):
+            cost += counter[i] * distance
+        elif (part == 2):
+            cost += counter[i] * (distance * (distance+1))//2
+
+    return cost
+
+
 def convert_int_list_to_str(l):
     return "".join(list(map(str, l)))
 

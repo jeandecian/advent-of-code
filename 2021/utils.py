@@ -16,7 +16,8 @@ def calculate_rating(mode, report):
     while len(report) > 1:
         report_sum = list(map(sum, zip(*report)))
         rate = calculate_rate(rate_mode, report_sum, len(report)/2)
-        report = list(filter(lambda x: x[i] == int(rate[i]), report))
+        report = list(filter(lambda x, report_x=x[i], rate_x=int(
+            rate[i]): report_x == rate_x, report))
         i += 1
 
     return convert_int_list_to_str(report[0])
@@ -66,15 +67,15 @@ def convert_entry_to_point(entry):
 
 
 def create_empty_matrix(width, height):
-    return [[0 for x in range(width)] for y in range(height)]
+    return [[0 for _ in range(width)] for _ in range(height)]
 
 
 def create_empty_matrices(nb_matrices, width, height):
-    return [[[0 for x in range(width)] for y in range(height)] for z in range(nb_matrices)]
+    return [[[0 for _ in range(width)] for _ in range(height)] for _ in range(nb_matrices)]
 
 
 def create_counter_list(l, list_min, list_max):
-    counter = [0 for i in range(list_min, list_max)]
+    counter = [0 for _ in range(list_min, list_max)]
 
     for c in l:
         counter[c] += 1

@@ -47,7 +47,7 @@ def part2(vents):
             delta_x, delta_y = end[0]-start[0], end[1]-start[1]
             x, y = start[0], start[1]
 
-            for i in range(delta_x+1):
+            for _ in range(delta_x+1):
                 diagram[y][x] += 1
                 y += int(1 * delta_y/abs(delta_y))
                 x += int(1 * delta_x/abs(delta_x))

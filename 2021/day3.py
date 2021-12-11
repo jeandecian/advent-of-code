@@ -15,10 +15,10 @@ def part1(report):
 def part2(report):
     oxygen_generator_rating = int(
         utils.calculate_rating(c.OXYGEN_GENERATOR, report), 2)
-    CO2_scrubber_rating = int(
+    co2_scrubber_rating = int(
         utils.calculate_rating('CO2_scrubber', report), 2)
 
-    return oxygen_generator_rating * CO2_scrubber_rating
+    return oxygen_generator_rating * co2_scrubber_rating
 
 
 if __name__ == '__main__':

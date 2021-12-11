@@ -46,7 +46,7 @@ def part2(draw, boards):
     bingo = False
     number_drawn = 0
     last_winning_board = 0
-    winning_boards_masks = [0 for i in range(len(boards))]
+    winning_boards_masks = [0 for _ in range(len(boards))]
     current_draw = [d for d in draw]
 
     while not bingo:

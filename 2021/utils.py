@@ -118,3 +118,7 @@ def read_as_line_matrices(day, mode='input'):
             list(map(lambda x: list(map(int, x)), raw_data[6*i+2:6*i+7])))
 
     return draw, boards
+
+
+def read_as_int_list(day, mode='input'):
+    return list(map(int, read_as_str(day, mode)[0].split(',')))

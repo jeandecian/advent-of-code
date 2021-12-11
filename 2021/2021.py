@@ -5,6 +5,7 @@ import day2
 import day3
 import day4
 import day5
+import day6
 
 
 class Test2021(unittest.TestCase):
@@ -36,6 +37,13 @@ class Test2021(unittest.TestCase):
             vent[0]), utils.convert_entry_to_point(vent[2])] for vent in vents]
         self.assertEqual(day5.part1(vents), 6461)
         self.assertEqual(day5.part2(vents), 18065)
+
+    def test_day6(self):
+        lanterfishses_ages = utils.read_as_int_list(6)
+        self.assertEqual(day6.calculate_lanterfishes_propagation(
+            lanterfishses_ages, 80), 359999)
+        self.assertEqual(day6.calculate_lanterfishes_propagation(
+            lanterfishses_ages, 256), 1631647919273)
 
 
 if __name__ == '__main__':

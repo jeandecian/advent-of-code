@@ -2,10 +2,7 @@ import utils
 
 
 def calculate_lanterfishes_propagation(ages, day):
-    counter = [0 for i in range(9)]
-
-    for age in ages:
-        counter[age] += 1
+    counter = utils.create_counter_list(ages, 0, 9)
 
     for _ in range(day):
         temp_6 = 0

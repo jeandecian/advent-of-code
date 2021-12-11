@@ -60,6 +60,15 @@ def create_empty_matrices(nb_matrices, width, height):
     return [[[0 for x in range(width)] for y in range(height)] for z in range(nb_matrices)]
 
 
+def create_counter_list(l, list_min, list_max):
+    counter = [0 for i in range(list_min, list_max)]
+
+    for c in l:
+        counter[c] += 1
+
+    return counter
+
+
 def display_part(part, answer):
     print(f"[{part}] {answer}")
 

@@ -7,6 +7,7 @@ import day4
 import day5
 import day6
 import day7
+import day8
 
 
 class Test2021(unittest.TestCase):
@@ -50,6 +51,11 @@ class Test2021(unittest.TestCase):
         crabs_positions = utils.read_as_int_list(7)
         self.assertEqual(day7.calculate_min_fuel(crabs_positions, 1), 356179)
         self.assertEqual(day7.calculate_min_fuel(crabs_positions, 2), 99788435)
+
+    def test_day8(self):
+        signals = utils.read_as_list(8)
+        self.assertEqual(day8.part1(signals), 237)
+        self.assertEqual(day8.part2(signals), 1009098)
 
 
 if __name__ == '__main__':

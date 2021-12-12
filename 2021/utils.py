@@ -16,8 +16,8 @@ def calculate_rating(mode, report):
     while len(report) > 1:
         report_sum = list(map(sum, zip(*report)))
         rate = calculate_rate(rate_mode, report_sum, len(report)/2)
-        report = list(filter(lambda x, report_x=x[i], rate_x=int(
-            rate[i]): report_x == rate_x, report))
+        report = list(filter(lambda x, rate_x=int(
+            rate[i]): x[i] == rate_x, report))
         i += 1
 
     return convert_int_list_to_str(report[0])

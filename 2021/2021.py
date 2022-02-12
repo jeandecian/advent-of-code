@@ -8,6 +8,7 @@ import day5
 import day6
 import day7
 import day8
+import day9
 
 
 class Test2021(unittest.TestCase):
@@ -56,6 +57,13 @@ class Test2021(unittest.TestCase):
         signals = utils.read_as_list(8)
         self.assertEqual(day8.part1(signals), 237)
         self.assertEqual(day8.part2(signals), 1009098)
+
+    def test_day9(self):
+        heightmap = utils.read_as_str(9)
+        heightmap = [list(map(int, list(str(height.rstrip()))))
+                     for height in heightmap]
+        self.assertEqual(day9.part1(heightmap), 562)
+        self.assertEqual(day9.part2(heightmap), 1076922)
 
 
 if __name__ == '__main__':

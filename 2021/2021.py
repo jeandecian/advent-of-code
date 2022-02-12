@@ -9,6 +9,7 @@ import day6
 import day7
 import day8
 import day9
+import day10
 
 
 class Test2021(unittest.TestCase):
@@ -64,6 +65,13 @@ class Test2021(unittest.TestCase):
                      for height in heightmap]
         self.assertEqual(day9.part1(heightmap), 562)
         self.assertEqual(day9.part2(heightmap), 1076922)
+
+    def test_day10(self):
+        navigation_subsystem = utils.read_as_str(10)
+        navigation_subsystem = [list(line.rstrip())
+                                for line in navigation_subsystem]
+        self.assertEqual(day10.part1(navigation_subsystem), 462693)
+        self.assertEqual(day10.part2(navigation_subsystem), 3094671161)
 
 
 if __name__ == '__main__':

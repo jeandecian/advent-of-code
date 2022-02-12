@@ -10,6 +10,7 @@ import day7
 import day8
 import day9
 import day10
+import day11
 
 
 class Test2021(unittest.TestCase):
@@ -72,6 +73,13 @@ class Test2021(unittest.TestCase):
                                 for line in navigation_subsystem]
         self.assertEqual(day10.part1(navigation_subsystem), 462693)
         self.assertEqual(day10.part2(navigation_subsystem), 3094671161)
+
+    def test_day11(self):
+        energy_levels = utils.read_as_str(11)
+        energy_levels = [list(map(int, list(str(energy_row.rstrip()))))
+                         for energy_row in energy_levels]
+        self.assertEqual(day11.part1(energy_levels), 1732)
+        self.assertEqual(day11.part2(energy_levels), 290)
 
 
 if __name__ == '__main__':
